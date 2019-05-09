@@ -21,9 +21,6 @@ def filternames(names):
         if len(n) != 3:
             re += [filtername(n)]
     return re
-ret = filtername('홍')
-ns = ["다리우스", "하니", "홍나단", "홍"]
-print(filternames(ns))
 
 
 def printsort2(x):
@@ -35,14 +32,8 @@ def printsort2(x):
         print(a, end=" ")
 
 
-x = [3, 1, 2, 10, 6]
-
-printsort2(x)
-
 def print_hell(inp):
     if "안녕" in inp:
         print("Hello")
 
 
-inp = input('입력: ')
-print_hell(inp)
