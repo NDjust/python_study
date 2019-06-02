@@ -18,7 +18,7 @@ what is Decorator?
 def decorator_f(original_f): #1, #4
     def wrapper_f(): #5, #8
         return original_f() #9
-    retunr wrapper_f #6
+    return wrapper_f #6
 
 
 def dp(): #2, #10
@@ -45,14 +45,14 @@ def dp_2():
 # display_1 = decorator_function(dp_1) 
 # display_2 = decorator_function(dp_2) 
  
-display_1() # 변수에 함수형 리턴값 할당 없이 바로 함수 호출이 가능하다. 
-display_2() # 변수에 함수형 리턴값 할당 없이 바로 함수 호출이 가능하다. 
+dp_1() # 변수에 함수형 리턴값 할당 없이 바로 함수 호출이 가능하다. 
+dp_2() # 변수에 함수형 리턴값 할당 없이 바로 함수 호출이 가능하다. 
  
 
 
  # 인자가 전달되는 함수는 어떻게 테코레이팅 해야 할까?
 
- def decorator_f(original_f):
+def decorator_f(original_f):
     def wrapper_f(*args, **kwargs):
         print("{} 함수가 호출되기 전입니다.".format(original_f.__name__))
         return original_f(*args, **kwargs)
